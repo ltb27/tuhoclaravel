@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+    <base href="https://tuhoclaravel.net/"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -46,7 +46,7 @@
         </div>
         <div class="col-md-6">
             <div class="ibox-content">
-                <form method="post" class="m-t" role="form" action="{{route("post-login")}}">
+                <form method="post" class="m-t" role="form" action="{{route("auth.post-login")}}">
                     @csrf
                     <div class="form-group">
                         <input name="email" type="text" class="form-control @error("email") is-invalid @enderror"

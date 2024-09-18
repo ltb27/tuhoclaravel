@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\AuthenticateMiddleware;
+use App\Http\Middleware\LoginMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//})->name('home');
+Route::get('/admin/login', [UserController::class, 'index'])->name('auth.login')->middleware(LoginMiddleware::class);
 
-Route::get('/login', [UserController::class, 'index'])->name('login');
-Route::post('/login', [UserController::class, 'login'])->name('post-login');
+Route::post('/admin/login', [UserController::class, 'login'])->name('auth.post-login');
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/admin/logout', [UserController::class, 'logout'])->name('auth.logout');
+
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(AuthenticateMiddleware::class);
