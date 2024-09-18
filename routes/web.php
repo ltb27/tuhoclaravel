@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//})->name('home');
+
+Route::get('/login', [UserController::class, 'index'])->name('login');
+Route::post('/login', [UserController::class, 'login'])->name('post-login');
+
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
