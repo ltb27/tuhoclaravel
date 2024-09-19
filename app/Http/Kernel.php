@@ -6,7 +6,6 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\AuthenticateMiddleware;
 use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\LoginMiddleware;
-use App\Http\Middleware\LoginMidlleware;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\TrimStrings;
