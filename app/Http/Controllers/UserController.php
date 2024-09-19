@@ -13,7 +13,7 @@ class UserController extends Controller
     {
     }
 
-    public function index(AuthRequest $request)
+    public function index(Request $request)
     {
         if (Auth::check()) {
             redirect()->route('dashboard.index');

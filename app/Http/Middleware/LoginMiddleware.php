@@ -2,9 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Auth;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class LoginMiddleware
@@ -16,8 +16,9 @@ class LoginMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+
         if (Auth::check()) {
-            redirect()->route('dashboard.index');
+            return redirect()->route('dashboard.index');
         }
         return $next($request);
     }
