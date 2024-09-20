@@ -11,6 +11,9 @@ class DashboardController extends Controller
         if (!Auth::check()) {
             return redirect()->route('auth.login');
         }
-        return view('admin.dashboard.layout');
+
+        $content = 'admin.components.dashboard';
+
+        return view('admin.dashboard.layout', compact('content'));
     }
 }
