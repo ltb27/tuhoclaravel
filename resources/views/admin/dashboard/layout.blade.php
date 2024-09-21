@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 @include("admin.components.head")
 <body>
 <div id="wrapper">
