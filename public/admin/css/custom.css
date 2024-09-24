@@ -4,3 +4,23 @@
     margin-top: 4px;
     font-style: italic;
 }
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.mb-5 {
+    margin-bottom: 20px;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.customize-table {
+    td, th {
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
+}
