@@ -18,4 +18,7 @@
     <link href="admin/css/custom.css" rel="stylesheet">
 
     <script src="admin/js/jquery-3.1.1.min.js"></script>
+
+    @vite('resources/css/app.css')
+
 </head>

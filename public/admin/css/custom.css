@@ -18,9 +18,36 @@ h5 {
     font-weight: normal;
 }
 
-.customize-table {
-    td, th {
-        text-align: center !important;
-        vertical-align: middle !important;
-    }
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    vertical-align: middle !important;
+}
+
+table .image {
+    width: 73px;
+    height: 73px;
+    display: inline-block;
+}
+
+.img-cover img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.uk-flex-space-between {
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.uk-flex-middle {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
 }
