@@ -14,11 +14,11 @@
     @endif
 
     <link href="admin/css/style.css" rel="stylesheet">
+    vi
 
     <link href="admin/css/custom.css" rel="stylesheet">
 
     <script src="admin/js/jquery-3.1.1.min.js"></script>
 
-    @vite('resources/css/app.css')
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
