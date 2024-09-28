@@ -28,3 +28,5 @@ Route::get("/admin/user", [UserController::class, "index"])->name("user.index")-
 
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware("auth.dashboard");
+
+Route::get('/admin/demo', [DashboardController::class, 'demo']);

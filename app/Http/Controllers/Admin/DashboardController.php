@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Demo\Facades\DemoExample;
 use Illuminate\Routing\Controller;
 
 class DashboardController extends Controller
@@ -35,5 +36,10 @@ class DashboardController extends Controller
                 'admin/js/demo/sparkline-demo.js'
             ]
         ];
+    }
+
+    public function demo()
+    {
+        echo DemoExample::hello();
     }
 }
