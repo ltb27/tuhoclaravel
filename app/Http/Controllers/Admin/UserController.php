@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Services\Interfaces\UserServiceInterface;
+use App\Services\Interfaces\UserServiceInterface as IUserService;
 
 class UserController
 {
-    private UserServiceInterface $userService;
+    private IUserService $userService;
 
-    function __construct(UserServiceInterface $userService)
+    function __construct(IUserService $userService)
     {
         $this->userService = $userService;
     }

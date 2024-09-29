@@ -2,13 +2,18 @@
 
 namespace App\Providers;
 
+use App\Repositories\Interfaces\UserRepositoryInterface;
+use App\Repositories\UserRepository;
+use App\Services\Interfaces\UserServiceInterface;
+use App\Services\UserService;
 use Illuminate\Support\ServiceProvider;
 use Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public $serviceBinding = [
-        'App\Services\Interfaces\UserServiceInterface' => 'App\Services\UserService',
+    protected array $serviceBinding = [
+        UserServiceInterface::class => UserService::class,
+        UserRepositoryInterface::class => UserRepository::class
     ];
 
     /**
@@ -17,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         foreach ($this->serviceBinding as $interface => $class) {
-            $this->app->bind($interface, $class);
+            $this->app->scopedIf($interface, $class);
         }
     }
 

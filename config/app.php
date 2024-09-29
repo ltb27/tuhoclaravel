@@ -185,6 +185,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'DemoFe' => App\Facades\DemoExample::class,
+//        'Example' => App\Facades\Example::class,
     ])->toArray(),
 
 ];

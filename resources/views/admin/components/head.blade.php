@@ -1,5 +1,5 @@
 <head>
-    <base href="{{env("APP_URL")}}">
+    <base href="{{config("app.url")}}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSPINIA | Dashboard v.2</title>

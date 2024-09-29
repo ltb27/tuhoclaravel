@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Demo\Facades\DemoExample;
+use App\Facades\Example;
 use Illuminate\Routing\Controller;
 
 class DashboardController extends Controller
@@ -40,6 +40,6 @@ class DashboardController extends Controller
 
     public function demo()
     {
-        echo DemoExample::hello();
+        echo Example::doSomething();
     }
 }
