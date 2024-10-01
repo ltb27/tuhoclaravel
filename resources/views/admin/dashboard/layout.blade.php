@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-@include("admin.components.head")
+@if(isset($seo))
+    @include("admin.components.head",["title" => $seo['title']])
+@else
+    @include("admin.components.head")
+@endif
+
 <body>
 <div id="wrapper">
     @include("admin.components.sidebar")

@@ -25,6 +25,6 @@ class UserService implements UserServiceInterface
 
     public function paginate($page): array|_IH_User_C|LengthAwarePaginator
     {
-        return $this->userRepository::paginate($page);
+        return $this->userRepository->paginate($page);
     }
 }

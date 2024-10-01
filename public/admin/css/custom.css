@@ -51,3 +51,23 @@ table .image {
     -webkit-align-items: center;
     align-items: center;
 }
+
+.box .ibox {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-label {
+    display: inline-block;
+}
+
+.panel-title {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.panel-description {
+    font-size: 14px;
+    font-style: italic;
+}

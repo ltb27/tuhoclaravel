@@ -17,10 +17,10 @@
                    placeholder="Tìm kiếm thành viên">
 
             <a style="margin-bottom: 0 !important;" class="btn btn-success rounded-lg"><i
-                        class="fa fa-search"></i> Tìm kiếm</a>
+                    class="fa fa-search"></i> Tìm kiếm</a>
         </div>
-        <a style="margin-bottom: 0 !important;" class="btn btn-primary rounded-lg"><i
-                    class="fa fa-plus"></i>
+        <a href="{{route("user.create")}}" style="margin-bottom: 0 !important;" class="btn btn-primary rounded-lg"><i
+                class="fa fa-plus"></i>
             Thêm mới thành viên
         </a>
     </div>

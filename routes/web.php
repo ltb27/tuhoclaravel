@@ -24,7 +24,11 @@ Route::post('/admin/login', [AuthController::class, 'login'])->name('auth.post-l
 Route::get('/admin/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 //User
-Route::get("/admin/user", [UserController::class, "index"])->name("user.index")->middleware("auth.dashboard");
+Route::group(['prefix' => "admin/user", "middleware" => "auth.dashboard"], function () {
+    Route::get("", [UserController::class, "index"])->name("user.index");
+    Route::get("create", [UserController::class, "create"])->name("user.create");
+});
+
 
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware("auth.dashboard");

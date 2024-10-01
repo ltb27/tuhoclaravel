@@ -1,9 +1,13 @@
-@include("admin.user.components.breadcrumb")
+@if(isset($seo))
+    @include("admin.components.breadcrumb",["title" => $seo['title'],"tableHeading" => $seo['tableHeading']])
+@endif
+
+
 <div class="row mt-5 text-md">
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>{{config("apps.user.userTableName")}}</h5>
+                <h5>{{$seo['tableHeading'] }}</h5>
                 @include("admin.user.components.toolbox")
             </div>
             <div class="ibox-content">
