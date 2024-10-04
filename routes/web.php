@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Ajax\LocationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,8 @@ Route::group(['prefix' => "admin/user", "middleware" => "auth.dashboard"], funct
     Route::get("create", [UserController::class, "create"])->name("user.create");
 });
 
+//Ajax
+Route::get('ajax/location/getLocation', [LocationController::class, 'getLocation'])->name('ajax.location.getLocation')->middleware("auth.dashboard");
 
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware("auth.dashboard");

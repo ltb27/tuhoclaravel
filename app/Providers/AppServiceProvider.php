@@ -2,8 +2,14 @@
 
 namespace App\Providers;
 
+use App\Repositories\DistrictRepository;
+use App\Repositories\Interfaces\IDistrictRepository;
+use App\Repositories\Interfaces\IProvinceRepository;
+use App\Repositories\Interfaces\IWardRepository;
 use App\Repositories\Interfaces\UserRepositoryInterface;
+use App\Repositories\ProvinceRepository;
 use App\Repositories\UserRepository;
+use App\Repositories\WardRepository;
 use App\Services\Interfaces\UserServiceInterface;
 use App\Services\UserService;
 use Illuminate\Support\ServiceProvider;
@@ -13,7 +19,10 @@ class AppServiceProvider extends ServiceProvider
 {
     protected array $serviceBinding = [
         UserServiceInterface::class => UserService::class,
-        UserRepositoryInterface::class => UserRepository::class
+        UserRepositoryInterface::class => UserRepository::class,
+        IProvinceRepository::class => ProvinceRepository::class,
+        IDistrictRepository::class => DistrictRepository::class,
+        IWardRepository::class => WardRepository::class
     ];
 
     /**
